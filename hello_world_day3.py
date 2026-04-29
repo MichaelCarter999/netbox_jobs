@@ -33,5 +33,5 @@ class HelloJobsWithInputs(Script):
 
     def run(self, data, commit):
         username = data["username"]
-        self.log_info(f"Hello Jobs with {username}."
+        self.log_info(f"Hello Jobs with {username}.")
 
