@@ -1,4 +1,4 @@
-from extras.scripts import Script
+from extras.scripts import Script, StringVar
 
 class HelloJobs(Script):
 
@@ -20,3 +20,17 @@ class HelloLoggingJobs(Script):
         self.log_debug("This is a debug type log.")
         self.log_warning("This is a warning type log.")
         self.log_failure("This is a failure type log.")
+
+class HelloJobsWithInputs(Script):
+
+    username = StringVar(
+        label="Username"
+    )
+
+    class Meta:
+        name = "Hello Jobs with User Inputs"
+        description = "Hello Jobs with Different User Inputs"
+
+    def run(self, data, commit):
+        username = data["username"]
+        self.log_info(f"Hello Jobs with {username}.")
