@@ -1,9 +1,8 @@
-from extras.scripts import Script
-from utilities.forms import StringField
+from extras.scripts import Script, StringVar
 
 class HelloJobsWithInputs(Script):
 
-    username = StringField(
+    username = StringVar(
         label="Username"
     )
 
