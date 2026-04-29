@@ -1,7 +1,5 @@
 from extras.scripts import Script
 
-name = "Hello World Netbox Jobs"
-
 class HelloJobs(Script):
 
     class Meta:
