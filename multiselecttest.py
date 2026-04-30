@@ -1,4 +1,4 @@
-from extras.scripts import Script, MultiChoiceVar
+from extras.scripts import Script, ChoiceVar
 
 class HelloVariables(Script):
 
@@ -9,7 +9,7 @@ class HelloVariables(Script):
         ('b', 'Bored'),
     )    
     
-    feelings = MultiChoiceVar(
+    feelings = ChoiceVar(
         choices=CHOICES,
         description="How are you feeling?"
     )
