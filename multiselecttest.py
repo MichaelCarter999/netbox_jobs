@@ -1,8 +1,22 @@
-from extras.scripts import Script
+from extras.scripts import Script, MultiSelectVar
 
-class Test(Script):
+CHOICES = (
+    ("h", "Happy"),
+    ("s", "Sad"),
+    ("e", "Excited"),
+)
+
+class HelloVariables(Script):
+
+    feelings = MultiSelectVar(
+        choices=CHOICES,
+        description="How are you feeling?"
+    )
+
     class Meta:
-        name = "Script Test"
+        name = "Hello Variables"
+        description = "Scripts Variable Examples"
 
     def run(self, data, commit):
-        self.log_info("Hello")
+        feelings = data["feelings"]
+        self.log_info(f"I am feeling {feelings}!")
