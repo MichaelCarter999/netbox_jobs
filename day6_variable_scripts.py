@@ -14,7 +14,6 @@ class HelloVariables(Script):
     class Meta:
         name = "Hello Variables"
         description = "Scripts Variable Examples"
-        ordering = "Day 6 Variables"
 
     def run(self, data, commit):
         message = data["message"]
