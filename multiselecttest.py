@@ -3,10 +3,10 @@ from extras.scripts import Script, ChoiceVar
 class HelloVariables(Script):
 
     CHOICES = (
-        ('h', 'Happy'),
-        ('s', 'Sad'),
-        ('e', 'Excited'),
-        ('b', 'Bored'),
+        ('Happy', 'Happy'),
+        ('Sad', 'Sad'),
+        ('Excited', 'Excited'),
+        ('Bored', 'Bored'),
     )    
     
     feelings = ChoiceVar(
