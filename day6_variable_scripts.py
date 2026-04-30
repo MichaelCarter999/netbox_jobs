@@ -18,5 +18,5 @@ class HelloVariables(Script):
     def run(self, data, commit):
         message = data["message"]
         days = data["days"]
-        
+
         self.log_info(f"Please give the message: {message} in {days} days.")
