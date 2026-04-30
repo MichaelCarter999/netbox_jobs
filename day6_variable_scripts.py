@@ -20,4 +20,4 @@ class HelloVariables(Script):
         message = data["message"]
         days = data["days"]
 
-        self.log_debug(f"Please give the message: {message} in {days} days.")
+        self.log_info(f"Please give the message: {message} in {days} days.")
